@@ -1,0 +1,12 @@
+@use "./colors.scss" as colors;
+
+@mixin title() {
+  color: colors.$textPrimary;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+
+  span {
+    color: colors.$textSecondary;
+  }
+}
