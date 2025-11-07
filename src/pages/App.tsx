@@ -1,4 +1,7 @@
 import AboutUs from "../components/AboutUs.tsx";
+import Contact from "../components/Contact.tsx";
+import Footer from "../components/Footer.tsx";
+import Gallery from "../components/Gallery.tsx";
 import Header from "../components/Header.tsx";
 import Home from "../components/Home.tsx";
 import Service from "../components/Service.tsx";
@@ -22,10 +25,16 @@ export default function App() {
         <section className="mainService" id="mainService">
           <Service />
         </section>
-        <section className="mainGallery" id="mainGallery"></section>
-        <section className="mainContact" id="mainContact"></section>
+        <section className="mainGallery" id="mainGallery">
+          <Gallery />
+        </section>
+        <section className="mainContact" id="mainContact">
+          <Contact />
+        </section>
       </main>
-      <footer className="footer" id="footer"></footer>
+      <footer className="footer" id="footer">
+        <Footer />
+      </footer>
     </>
   );
 }

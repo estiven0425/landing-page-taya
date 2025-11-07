@@ -19,7 +19,6 @@ export default function AboutUs() {
           alt="Equipo de trabajo de TALCOS de Yarumal S.A.S"
           className="mainAboutUsFigureImg"
           decoding="async"
-          loading="lazy"
           src={img}
         />
       </figure>

@@ -1,6 +1,10 @@
 @use "../assets/styles/colors" as colors;
 @use "../assets/styles/mixin" as mixin;
 
+:root {
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -44,12 +48,13 @@ body {
   justify-content: center;
   padding: 25px 100px;
 
-  .headerImg {
+  &Img {
     height: 100px;
+    transition: all 0.5s ease-in-out;
     width: 237px;
   }
 
-  .headerNav {
+  &Nav {
     align-content: center;
     display: flex;
     flex-direction: row;
@@ -58,7 +63,7 @@ body {
     justify-content: center;
     width: 100%;
 
-    .headerNavItem {
+    &Item {
       color: colors.$textPrimary;
       cursor: pointer;
       text-decoration: none;
@@ -77,9 +82,10 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  gap: 25px;
   justify-content: flex-start;
 
-  .mainHome {
+  &Home {
     align-content: center;
     align-items: center;
     background-attachment: scroll;
@@ -98,21 +104,24 @@ body {
     justify-content: center;
     padding: 0 100px;
 
-    .mainHomeSlogan {
+    &Slogan {
       color: colors.$textPrimary;
       font-size: 5rem;
       font-weight: 400;
       margin: 0;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
     }
 
-    .mainHomeDescription {
+    &Description {
       color: colors.$textTertiary;
       font-size: 1rem;
       margin: 0;
       text-align: center;
+      transition: all 0.5s ease-in-out;
     }
 
-    .mainHomeButton {
+    &Button {
       align-content: center;
       align-items: center;
       background-color: colors.$backgroundPrimary;
@@ -126,7 +135,7 @@ body {
       font-size: 1rem;
       height: 50px;
       text-decoration: none;
-      transition: background-color 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
       width: 150px;
 
       &:focus,
@@ -137,74 +146,693 @@ body {
     }
   }
 
-  .mainAboutUs {
+  &AboutUs {
     align-content: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 100vh;
     justify-content: space-between;
+    min-height: 100vh;
     padding: 0 100px;
 
-    .mainAboutUsArticle {
+    &Article {
       align-content: flex-start;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
       gap: 25px;
-      height: 100%;
+      height: 100vh;
       justify-content: center;
       width: 50%;
 
-      .mainAboutUsArticleTitle {
+      &Title {
         @include mixin.title();
       }
 
-      .mainAboutUsArticleText {
+      &Text {
         color: colors.$textPrimary;
         font-size: 1rem;
         margin: 0;
       }
     }
 
-    .mainAboutUsFigure {
+    &Figure {
       align-content: center;
       align-items: center;
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      height: 100%;
+      height: 100vh;
       justify-content: center;
       margin: 0;
       width: 50%;
 
-      .mainAboutUsFigureImg {
+      &Img {
         box-shadow: colors.$backgroundSecondary 50px -50px 0px;
         height: 400px;
         object-fit: cover;
         object-position: center;
+        transition: all 0.5s ease-in-out;
         width: 450px;
       }
     }
   }
 
-  .mainService {
+  &Service {
     align-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 25px;
-    height: 100vh;
     justify-content: flex-start;
+    min-height: 100vh;
     padding: 0 100px;
 
-    .mainServiceTitle {
+    &Title {
       @include mixin.title();
+
+      transition: all 0.5s ease-in-out;
     }
 
-    .mainServiceContainer {
+    &Container {
+      align-content: flex-start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      width: 100%;
 
+      &Item {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        &Icon {
+          color: colors.$textPrimary;
+          font-size: 3.5rem;
+          margin: 0;
+          transition: all 0.5s ease-in-out;
+        }
+
+        &Title {
+          color: colors.$textPrimary;
+          font-size: 2rem;
+          font-weight: 400;
+          margin: 0;
+        }
+
+        &Description {
+          color: colors.$textPrimary;
+          font-size: 1rem;
+          margin: 0;
+          text-align: center;
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  &Gallery {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 25px;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 0 100px;
+
+    &Title {
+      @include mixin.title();
+
+      transition: all 0.5s ease-in-out;
+    }
+
+    &Text {
+      color: colors.$textPrimary;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    &Article {
+      display: grid;
+      grid-gap: 25px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      height: 100%;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+
+      &Figure {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0;
+
+        &Img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+        }
+
+        &Caption {
+          &Link {
+            color: colors.$textPrimary;
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+              outline: none;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &Contact {
+    align-content: flex-start;
+    background-attachment: scroll;
+    background-blend-mode: normal;
+    background-image:
+      linear-gradient(colors.$filterColor),
+      url("../assets/img/background-home.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 0 100px;
+
+    &Article {
+      align-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 25px;
+      height: 100vh;
+      justify-content: center;
+      width: 50%;
+
+      &Title {
+        @include mixin.title();
+
+        color: colors.$textTertiary;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &Form {
+        align-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 25px;
+        justify-content: flex-start;
+        padding-right: 25px;
+
+        &Fieldset {
+          align-content: flex-start;
+          border: none;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          gap: 25px;
+          justify-content: flex-start;
+          padding: 0;
+          width: 100%;
+
+          &Input {
+            background-color: colors.$backgroundPrimary;
+            border: none;
+            border-radius: 5px;
+            color: colors.$textPrimary;
+            font-family: "Alata", sans-serif;
+            padding: 15px 10px;
+            transition: all 0.5s ease-in-out;
+
+            &:focus,
+            &:hover {
+              background-color: colors.$backgroundSecondary;
+              outline: none;
+            }
+
+            &::placeholder {
+              font-family: "Alata", sans-serif;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &Textarea {
+          background-color: colors.$backgroundPrimary;
+          border: none;
+          border-radius: 5px;
+          color: colors.$textPrimary;
+          font-family: "Alata", sans-serif;
+          height: 200px;
+          padding: 15px 10px;
+          resize: none;
+          transition: all 0.5s ease-in-out;
+
+          &:focus,
+          &:hover {
+            background-color: colors.$backgroundSecondary;
+            outline: none;
+          }
+
+          &::placeholder {
+            font-family: "Alata", sans-serif;
+            font-size: 1rem;
+          }
+        }
+
+        &Button {
+          background-color: transparent;
+          border-color: colors.$backgroundPrimary;
+          border-style: solid;
+          border-width: 2px;
+          color: colors.$textTertiary;
+          cursor: pointer;
+          font-size: 1rem;
+          height: 50px;
+          transition: all 0.5s ease-in-out;
+          width: 150px;
+
+          &:focus,
+          &:hover {
+            background-color: colors.$backgroundPrimary;
+            color: colors.$textPrimary;
+            outline: none;
+          }
+        }
+      }
+
+      &Status {
+        color: colors.$textTertiary;
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    &Iframe {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: 100vh;
+      justify-content: center;
+      margin: 0;
+      padding-left: 25px;
+      width: 50%;
+
+      &Map {
+        border: none;
+        height: 50%;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.footer {
+  align-content: flex-start;
+  background-color: colors.$backgroundTertiary;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px 0;
+  justify-content: space-between;
+  padding: 0 100px 25px;
+
+  &Social {
+    align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 25px;
+    justify-content: flex-start;
+    width: 30%;
+
+    &Menu {
+      align-content: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: flex-start;
+
+      &Item {
+        cursor: pointer;
+        font-size: 2.5rem;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.5s ease-in-out;
+
+        &Icon {
+          color: colors.$textTertiary;
+          transition: all 0.5s ease-in-out;
+
+          &:focus,
+          &:hover {
+            color: colors.$backgroundSecondary;
+          }
+        }
+
+        &:focus,
+        &:hover {
+          outline: none;
+        }
+      }
+    }
+
+    &Text {
+      color: colors.$textTertiary;
+      font-size: 1rem;
+      margin: 0;
+      text-align: left;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  &Info,
+  &Navigation {
+    @extend .footerSocial;
+  }
+
+  &Info {
+    &Title {
+      @include mixin.title();
+
+      color: colors.$textTertiary;
+    }
+
+    &List {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &Item {
+        color: colors.$textTertiary;
+        margin: 0;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  &Navigation {
+    &Title {
+      @include mixin.title();
+
+      color: colors.$textTertiary;
+    }
+
+    &List {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      &Item {
+        margin: 0;
+        padding: 5px 0;
+
+        &Link {
+          color: colors.$textTertiary;
+          text-decoration: none;
+
+          &:focus,
+          &:hover {
+            outline: none;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &Copyright {
+    color: colors.$textTertiary;
+    font-size: 1rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main {
+    &Home {
+      &Slogan {
+        font-size: 4rem;
+      }
+    }
+
+    &AboutUs {
+      &Article {
+      }
+
+      &Figure {
+        &Img {
+          height: 300px;
+          width: 350px;
+        }
+      }
+    }
+
+    &Gallery {
+      &Article {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .footer {
+    &Social,
+    &Info {
+      align-items: center;
+      width: 50%;
+    }
+
+    &Info,
+    &Navigation {
+      &List {
+        &Item {
+          text-align: center;
+        }
+      }
+    }
+
+    &Navigation {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    &Img {
+      height: 50px;
+      width: 137px;
+    }
+
+    &Nav {
+      display: none;
+    }
+  }
+
+  .main {
+    &Home {
+      height: calc(100vh - 100px);
+
+      &Slogan {
+        font-size: 3rem;
+      }
+
+      &Button {
+        height: 40px;
+        width: 130px;
+      }
+    }
+
+    &AboutUs {
+      gap: 25px;
+      min-height: auto;
+
+      &Article {
+        height: auto;
+        width: 100%;
+
+        &Title {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        &Text {
+          text-align: center;
+        }
+      }
+
+      &Figure {
+        height: auto;
+        width: 100%;
+
+        &Img {
+          box-shadow: none;
+          height: 250px;
+          width: 300px;
+        }
+      }
+    }
+
+    &Service {
+      min-height: auto;
+
+      &Title {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      &Container {
+        &Item {
+          &Icon {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+
+    &Gallery {
+      &Title {
+        font-size: 2rem;
+      }
+
+      &Text {
+        text-align: center;
+      }
+    }
+
+    &Contact {
+      min-height: auto;
+      padding-bottom: 25px;
+
+      &Article {
+        height: auto;
+        width: 100%;
+
+        &Title {
+          font-size: 2rem;
+          text-align: center;
+        }
+
+        &Form {
+          padding-right: 0;
+
+          &Fieldset {
+            &Input {
+              padding: 10px 5px;
+            }
+          }
+
+          &Textarea {
+            height: 100px;
+            padding: 10px 5px;
+          }
+
+          &Button {
+            height: 40px;
+            width: 100%;
+          }
+        }
+      }
+
+      &Iframe {
+        height: auto;
+        padding-left: 0;
+        width: 100%;
+
+        &Map {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &Social,
+    &Info {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    &Home,
+    &AboutUs,
+    &Service,
+    &Gallery,
+    &Contact {
+      padding: 0 50px;
+    }
+
+    &Gallery {
+      &Article {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &Contact {
+      padding-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main {
+    &AboutUs {
+      &Figure {
+        &Img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    &Social {
+      &Menu {
+        &Item {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    &Info,
+    &Navigation {
+      &Title {
+        font-size: 2rem;
+      }
     }
   }
 }
