@@ -1,14 +1,6 @@
-import img from "../assets/img/logo.png";
-
 export default function Header() {
   return (
     <>
-      <img
-        alt="Logo de TALCOS de Yarumal S.A.S"
-        className="headerImg"
-        decoding="async"
-        src={img}
-      ></img>
       <nav
         aria-label="Menú de navegación"
         className="headerNav"
@@ -20,30 +12,37 @@ export default function Header() {
         <a
           className="headerNavItem"
           href={"#mainAboutUs"}
-          title="Navegar a acerca de nosotros"
+          title="Navegar a acerca de mi"
         >
-          Acerca de nosotros
+          Acerca de mi
         </a>
         <a
           className="headerNavItem"
           href={"#mainService"}
-          title="Navegar a servicios"
+          title="Navegar a destrezas"
         >
-          Servicios
+          Destrezas
+        </a>
+        <a
+          className="headerNavItem"
+          href={"#mainCertified"}
+          title="Navegar a certificados"
+        >
+          Certificados
         </a>
         <a
           className="headerNavItem"
           href={"#mainGallery"}
-          title="Navegar a galería"
+          title="Navegar a proyectos"
         >
-          Galería
+          Proyectos
         </a>
         <a
           className="headerNavItem"
           href={"#mainContact"}
-          title="Navegar a contáctanos"
+          title="Navegar a contáctame"
         >
-          Contáctanos
+          Contáctame
         </a>
       </nav>
     </>

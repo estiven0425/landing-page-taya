@@ -7,42 +7,60 @@ export default function Footer() {
           className="footerSocialMenu"
         >
           <a
-            href="#"
+            href="https://www.instagram.com/estiven_0425/"
             title="Perfil de Instagram"
             className="footerSocialMenuItem"
+            target="_blank"
           >
             <i className="bi bi-instagram footerSocialMenuItemIcon"></i>
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/estiven.montoyatorres.5"
             title="Perfil de Facebook"
             className="footerSocialMenuItem"
+            target="_blank"
           >
             <i className="bi bi-facebook footerSocialMenuItemIcon"></i>
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/estiven-montoya-torres-b77a03254"
             title="Perfil de Linkedin"
             className="footerSocialMenuItem"
+            target="_blank"
           >
             <i className="bi bi-linkedin footerSocialMenuItemIcon"></i>
           </a>
+          <a
+            href="https://www.t.me/estiven0425"
+            title="Perfil de Telegram"
+            className="footerSocialMenuItem"
+            target="_blank"
+          >
+            <i className="bi bi-telegram footerSocialMenuItemIcon"></i>
+          </a>
         </nav>
         <p className="footerSocialText">
-          Puedes encontrarnos y contactar con nosotros a traves de nuestras
-          redes sociales
+          Puedes encontrarme y contactar conmigo a traves de mis redes sociales
         </p>
       </div>
       <div className="footerInfo">
         <h2 className="footerInfoTitle">Información</h2>
         <ul className="footerInfoList">
-          <li className="footerInfoListItem">PBX: 0000</li>
-          <li className="footerInfoListItem">Teléfono: 0000</li>
+          <li className="footerInfoListItem">Teléfono: +57 3242018817</li>
           <li className="footerInfoListItem">
-            E-mail: alcosdeyarumal@taya.com
+            E-mail: estivenmoto6@gmail.com.com
           </li>
-          <li className="footerInfoListItem">Dirección: CR 100 A #100A</li>
-          <li className="footerInfoListItem">NIT: 0000</li>
+          <li className="footerInfoListItem">
+            <a
+              className="footerInfoListItemLink"
+              download="cv-estiven0425.pdf"
+              href="/cv.pdf"
+              title="Descargar currículum"
+            >
+              Currículum
+            </a>
+          </li>
+          <li className="footerInfoListItem">Medellín - Colombia</li>
         </ul>
       </div>
       <nav className="footerNavigation">
@@ -61,43 +79,50 @@ export default function Footer() {
             <a
               className="footerNavigationListItemLink"
               href={"#mainAboutUs"}
-              title="Navegar a acerca de nosotros"
+              title="Navegar a acerca de mi"
             >
-              Acerca de nosotros
+              Acerca de mi
             </a>
           </li>
           <li className="footerNavigationListItem">
             <a
               className="footerNavigationListItemLink"
               href={"#mainService"}
-              title="Navegar a servicios"
+              title="Navegar a destrezas"
             >
-              Servicios
+              Destrezas
             </a>
           </li>
           <li className="footerNavigationListItem">
             <a
               className="footerNavigationListItemLink"
               href={"#mainGallery"}
-              title="Navegar a galería"
+              title="Navegar a proyectos"
             >
-              Galería
+              Proyectos
             </a>
           </li>
           <li className="footerNavigationListItem">
             <a
               className="footerNavigationListItemLink"
               href={"#mainContact"}
-              title="Navegar a contáctanos"
+              title="Navegar a contáctame"
             >
-              Contacto
+              Contáctame
             </a>
           </li>
         </ul>
       </nav>
       <p className="footerCopyright">
-        © {new Date().getFullYear()} Talcos de Yarumal S.A.S. Todos los
-        derechos reservados.
+        Realizado por:
+        <a
+          className="footerCopyrightLink"
+          href={"https://github.com/estiven0425"}
+          title="Navegar a mi perfil de GitHub"
+        >
+          {" "}
+          estiven0425
+        </a>
       </p>
     </>
   );

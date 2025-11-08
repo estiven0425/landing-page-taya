@@ -1,21 +1,17 @@
 export default function Home() {
   return (
     <>
-      <h1 className="mainHomeSlogan">
-        Lorem ipsum dolor sit amet
-      </h1>
+      <h1 className="mainHomeSlogan">¡Bienvenidos a mi portafolio web!</h1>
       <p className="mainHomeDescription">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque eaque
-        expedita harum ipsa, laboriosam libero magnam maiores necessitatibus
-        nostrum, officia omnis possimus provident quidem, quod repudiandae sint
-        tempora tempore totam?
+        ¡Hola! Soy Estiven Montoya y en esta página web les contaré quien soy,
+        mis destrezas y mis proyectos.
       </p>
       <a
         className="mainHomeButton"
         href={"#mainAboutUs"}
-        title="Navegar a acerca de nosotros"
+        title="Navegar a acerca de mi"
       >
-        Conocer más
+        Conocerme
       </a>
     </>
   );

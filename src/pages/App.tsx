@@ -1,5 +1,6 @@
 import AboutUs from "../components/AboutUs.tsx";
 import Contact from "../components/Contact.tsx";
+import Certified from "../components/Certified.tsx";
 import Footer from "../components/Footer.tsx";
 import Gallery from "../components/Gallery.tsx";
 import Header from "../components/Header.tsx";
@@ -24,6 +25,9 @@ export default function App() {
         </section>
         <section className="mainService" id="mainService">
           <Service />
+        </section>
+        <section className="mainCertified" id="mainCertified">
+          <Certified />
         </section>
         <section className="mainGallery" id="mainGallery">
           <Gallery />

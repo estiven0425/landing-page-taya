@@ -48,12 +48,6 @@ body {
   justify-content: center;
   padding: 25px 100px;
 
-  &Img {
-    height: 100px;
-    transition: all 0.5s ease-in-out;
-    width: 237px;
-  }
-
   &Nav {
     align-content: center;
     display: flex;
@@ -91,8 +85,7 @@ body {
     background-attachment: scroll;
     background-blend-mode: normal;
     background-image:
-      linear-gradient(colors.$filterColor),
-      url("../assets/img/background-home.jpg");
+      linear-gradient(colors.$filterColor), url("../assets/img/background.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,7 +93,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 25px;
-    height: calc(100vh - 199px);
+    height: calc(100vh - 74px);
     justify-content: center;
     padding: 0 100px;
 
@@ -152,7 +145,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 100vh;
     padding: 0 100px;
 
     &Article {
@@ -161,7 +153,6 @@ body {
       flex-direction: column;
       flex-wrap: nowrap;
       gap: 25px;
-      height: 100vh;
       justify-content: center;
       width: 50%;
 
@@ -173,6 +164,18 @@ body {
         color: colors.$textPrimary;
         font-size: 1rem;
         margin: 0;
+
+        &Link {
+          color: colors.$textSecondary;
+          cursor: pointer;
+          text-decoration: none;
+
+          &:focus,
+          &:hover {
+            outline: none;
+            text-decoration: underline;
+          }
+        }
       }
     }
 
@@ -182,14 +185,13 @@ body {
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      height: 100vh;
       justify-content: center;
       margin: 0;
       width: 50%;
 
       &Img {
         box-shadow: colors.$backgroundSecondary 50px -50px 0px;
-        height: 400px;
+        height: 600px;
         object-fit: cover;
         object-position: center;
         transition: all 0.5s ease-in-out;
@@ -206,7 +208,6 @@ body {
     flex-wrap: nowrap;
     gap: 25px;
     justify-content: flex-start;
-    min-height: 100vh;
     padding: 0 100px;
 
     &Title {
@@ -231,12 +232,92 @@ body {
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: flex-start;
+        text-align: center;
 
         &Icon {
           color: colors.$textPrimary;
           font-size: 3.5rem;
           margin: 0;
           transition: all 0.5s ease-in-out;
+        }
+
+        &Title {
+          color: colors.$textPrimary;
+          font-size: 2rem;
+          font-weight: 400;
+          margin: 0;
+        }
+
+        &Description {
+          color: colors.$textPrimary;
+          font-size: 1rem;
+          margin: 0;
+          text-align: center;
+          width: 200px;
+        }
+
+        &Img {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          height: 56px;
+          width: 56px;
+        }
+      }
+    }
+  }
+
+  &Certified {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 25px;
+    justify-content: flex-start;
+    padding: 0 100px;
+
+    &Title {
+      @include mixin.title();
+
+      transition: all 0.5s ease-in-out;
+    }
+
+    &Container {
+      align-content: flex-start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      width: 100%;
+
+      &Item {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        text-align: center;
+
+        &Link {
+          color: colors.$textPrimary;
+          cursor: pointer;
+          text-decoration: none;
+          transition: color 0.5s ease-in-out;
+
+          &:focus,
+          &:hover {
+            outline: none;
+          }
+
+          &Icon {
+            color: colors.$textPrimary;
+            font-size: 3.5rem;
+            margin: 0;
+            transition: all 0.5s ease-in-out;
+          }
         }
 
         &Title {
@@ -265,7 +346,6 @@ body {
     flex-wrap: nowrap;
     gap: 25px;
     justify-content: flex-start;
-    min-height: 100vh;
     padding: 0 100px;
 
     &Title {
@@ -295,21 +375,27 @@ body {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: flex-start;
         margin: 0;
 
         &Img {
           height: 100%;
+          max-height: 300px;
+          max-width: 300px;
           object-fit: cover;
           object-position: center;
           width: 100%;
         }
 
         &Caption {
+          color: colors.$textPrimary;
+          font-size: 1rem;
+          text-align: center;
+          word-break: break-word;
+
           &Link {
-            color: colors.$textPrimary;
+            color: colors.$textSecondary;
             cursor: pointer;
-            font-size: 1rem;
             text-decoration: none;
 
             &:focus,
@@ -328,8 +414,7 @@ body {
     background-attachment: scroll;
     background-blend-mode: normal;
     background-image:
-      linear-gradient(colors.$filterColor),
-      url("../assets/img/background-home.jpg");
+      linear-gradient(colors.$filterColor), url("../assets/img/background.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -337,7 +422,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 100vh;
     padding: 0 100px;
 
     &Article {
@@ -346,7 +430,6 @@ body {
       flex-direction: column;
       flex-wrap: nowrap;
       gap: 25px;
-      height: 100vh;
       justify-content: center;
       width: 50%;
 
@@ -458,7 +541,6 @@ body {
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      height: 100vh;
       justify-content: center;
       margin: 0;
       padding-left: 25px;
@@ -556,6 +638,18 @@ body {
         color: colors.$textTertiary;
         margin: 0;
         padding: 5px 0;
+
+        &Link {
+          color: colors.$textTertiary;
+          cursor: pointer;
+          text-decoration: none;
+
+          &:focus,
+          &:hover {
+            outline: none;
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -596,6 +690,18 @@ body {
     margin: 0;
     text-align: center;
     width: 100%;
+
+    &Link {
+      color: colors.$textSecondary;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -608,12 +714,26 @@ body {
     }
 
     &AboutUs {
+      gap: 25px;
+
       &Article {
+        width: 100%;
+
+        &Title {
+          text-align: center;
+        }
+
+        &Text {
+          text-align: center;
+        }
       }
 
       &Figure {
+        width: 100%;
+
         &Img {
-          height: 300px;
+          box-shadow: none;
+          height: 500px;
           width: 350px;
         }
       }
@@ -650,19 +770,12 @@ body {
 
 @media screen and (max-width: 900px) {
   .header {
-    &Img {
-      height: 50px;
-      width: 137px;
-    }
-
-    &Nav {
-      display: none;
-    }
+    display: none;
   }
 
   .main {
     &Home {
-      height: calc(100vh - 100px);
+      height: calc(100vh);
 
       &Slogan {
         font-size: 3rem;
@@ -676,10 +789,8 @@ body {
 
     &AboutUs {
       gap: 25px;
-      min-height: auto;
 
       &Article {
-        height: auto;
         width: 100%;
 
         &Title {
@@ -693,20 +804,32 @@ body {
       }
 
       &Figure {
-        height: auto;
         width: 100%;
 
         &Img {
           box-shadow: none;
-          height: 250px;
+          height: 450px;
           width: 300px;
         }
       }
     }
 
     &Service {
-      min-height: auto;
+      &Title {
+        font-size: 2rem;
+        text-align: center;
+      }
 
+      &Container {
+        &Item {
+          &Icon {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+
+    &Certified {
       &Title {
         font-size: 2rem;
         text-align: center;
@@ -729,10 +852,12 @@ body {
       &Text {
         text-align: center;
       }
+      &Article {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     &Contact {
-      min-height: auto;
       padding-bottom: 25px;
 
       &Article {
@@ -782,6 +907,12 @@ body {
     &Info {
       width: 100%;
     }
+
+    &Social {
+      &Text {
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -790,6 +921,7 @@ body {
     &Home,
     &AboutUs,
     &Service,
+    &Certified,
     &Gallery,
     &Contact {
       padding: 0 50px;
@@ -797,7 +929,12 @@ body {
 
     &Gallery {
       &Article {
-        grid-template-columns: repeat(1, 1fr);
+        &Figure {
+          &Img {
+            max-height: 100px;
+            max-width: 100px;
+          }
+        }
       }
     }
 

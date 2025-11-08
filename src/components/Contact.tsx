@@ -40,7 +40,7 @@ export default function Contact() {
   return (
     <>
       <article className="mainContactArticle">
-        <h2 className="mainContactArticleTitle">Contáctanos</h2>
+        <h2 className="mainContactArticleTitle">Contáctame</h2>
         <form
           ref={form}
           className="mainContactArticleForm"
@@ -91,12 +91,12 @@ export default function Contact() {
       <aside className="mainContactIframe">
         <iframe
           allowFullScreen
-          aria-label="Mapa de Talcos de Yarumal S.A.S"
+          aria-label="Mapa de Medellín"
           className="mainContactIframeMap"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.554623806824!2d-75.42626854074635!3d6.943708295480546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44f40437aa5ffb%3A0xfb585b02a1c4887c!2sTalcos%20De%20Yarumal!5e0!3m2!1sen!2sco!4v1762525013373!5m2!1sen!2sco"
-          title="Mapa de Talcos de Yarumal S.A.S"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63458.37000314496!2d-75.62249698629489!3d6.244201841754472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Medellin%2C%20Antioquia!5e0!3m2!1sen!2sco!4v1762631864501!5m2!1sen!2sco"
+          title="Mapa de Medellín"
         ></iframe>
       </aside>
     </>
